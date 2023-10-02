@@ -29,7 +29,7 @@ export default function Home() {
         />
       </div>
       <Hero />
-      <div className="mt-16">
+      <div className="mt-8 sm:mt-16">
         {/* <div className="text-center">
           <Heading title="Featured Languages" />
         </div> */}

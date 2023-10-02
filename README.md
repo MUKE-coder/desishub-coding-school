@@ -6,4 +6,5 @@
 4. [Codedamn](https://codedamn.com/)
 5. [Code with Mosh](https://codewithmosh.com/)
 6. [Coding Phase](https://codingphase.com/)
+   [Zero to Mastery](https://zerotomastery.io/)
 7. [Mockups](https://github.com/501A-Designs/react-mockup)

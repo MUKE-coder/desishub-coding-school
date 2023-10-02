@@ -38,17 +38,15 @@ export default function StudentTypes() {
     },
   ];
   return (
-    <div className="bg-slate-900 py-8 px-12">
-      <div className="flex items-center gap-4">
-        <div className="w-full flex flex-col gap-4 sm:w-1/2 ">
-          <h1 className="text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-10">
+    <div className="bg-slate-900 py-8 sm:px-12 px-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="w-full flex flex-col gap-4  ">
+          <h1 className="text-[1.65rem] sm:text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-8 sm:leading-10">
             <span className="text-green-400">Learning</span> to{" "}
             <span className="text-pink-500">Code</span> has never been easier
           </h1>
           <p>
-            At Desishub Coding School, we're dedicated to making coding
-            accessible to all, irrespective of your background or expertise. Our
-            mission is to empower a diverse range of individuals, from high
+            Our mission is to empower a diverse range of individuals, from high
             school students and job seekers to tech enthusiasts and university
             graduates. Whether you're a novice eager to delve into coding, a
             career changer, a tech enthusiast hungry for knowledge, or a recent
@@ -56,7 +54,7 @@ export default function StudentTypes() {
             customized to meet your specific needs.
           </p>
         </div>
-        <div className="w-full grid grid-cols-2 gap-4  justify-center mx-auto my-20 sm:w-1/2">
+        <div className="w-full grid grid-cols-2 gap-4  justify-center mx-auto my-10 sm:my-20 ">
           {studentTypes.map((type, i) => {
             return (
               <div
@@ -73,7 +71,7 @@ export default function StudentTypes() {
                     ></div>
                   </div>
                 </div>
-                <div className="flex flex-col gap-3 justify-center items-center text-center p-8">
+                <div className="flex flex-col gap-3 justify-center items-center text-center p-2 md:p-8">
                   <Image
                     src={type.image}
                     width={60}
@@ -81,10 +79,12 @@ export default function StudentTypes() {
                     alt=""
                     className="rounded-full object-cover "
                   />
-                  <p className={`font-bold mb-0   text-base ${type.color}`}>
+                  <p
+                    className={`font-bold mb-0 text-[.9rem]   sm:text-base leading-4 md:leading-5 ${type.color}`}
+                  >
                     {type.title}
                   </p>
-                  <p className="mb-0 leading-5 text-sm lg:text-base">
+                  <p className="mb-0 leading-3 md:leading-5 text-[0.6rem] lg:text-base">
                     {type.description}
                   </p>
                 </div>

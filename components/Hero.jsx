@@ -7,11 +7,11 @@ export default function Hero() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 items-start">
       <div className=" p-2 pb-20 md:pb-10 flex flex-col justify-center items-start lg:pt-10 xl:max-w-xl">
-        <h1 className="text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-10">
+        <h1 className="text-[1.7rem] sm:text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-10">
           <span className="text-green-400">Learning</span> to{" "}
           <span className="text-pink-500">Code</span> has never been easier
         </h1>
-        <p className="leading-relaxed text-gray-300 text-lg my-5 md:my-7 md:text-xl">
+        <p className="leading-relaxed text-gray-300 text-[1rem] sm:text-lg my-5 md:my-7 md:text-xl">
           All the <strong className="text-white mx-1">skills</strong> that
           employers expect from a developer in one place. No worries if you have
           never written code before.
@@ -19,11 +19,11 @@ export default function Hero() {
         <div className="flex flex-wrap gap-3">
           <Link
             href="#"
-            className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm md:text-xl px-5 py-2.5 md:py-4 text-center mr-2 mb-2"
+            className=" text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm md:text-xl px-5 py-2.5 md:py-4 text-center mr-2 mb-2"
           >
             View All Courses
           </Link>
-          <button className="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm md:text-xl px-5 py-2.5 md:py-4 text-center mr-2 mb-2">
+          <button className=" text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm md:text-xl px-5 py-2.5 md:py-4 text-center mr-2 mb-2">
             Take Our Career Quiz
           </button>
         </div>
