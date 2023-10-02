@@ -39,7 +39,7 @@ export default function StudentTypes() {
   ];
   return (
     <div className="bg-slate-900 py-8 sm:px-12 px-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
         <div className="w-full flex flex-col gap-4  ">
           <h1 className="text-[1.65rem] sm:text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-8 sm:leading-10">
             <span className="text-green-400">Learning</span> to{" "}

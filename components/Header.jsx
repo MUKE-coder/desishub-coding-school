@@ -56,7 +56,14 @@ export default function Header() {
   ];
   return (
     <div className="flex justify-between items-center px-16 py-8 w-full top-0 fixed h-14 bg-slate-950 z-50">
-      <h2 className="text-gray-100">Logo</h2>
+      {/* <h2 className="text-gray-100">Logo</h2> */}
+      <Link href="/">
+        <img
+          src="logo-red.png"
+          className="h-14"
+          alt="desishub coding school logo"
+        />
+      </Link>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
