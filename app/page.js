@@ -1,6 +1,9 @@
 "use client";
 import FeaturedLanguages from "@/components/CareerPath/FeaturedLanguages";
 import FindOut from "@/components/CareerPath/FindOut";
+import CourseList from "@/components/CourseList";
+import Cube from "@/components/Cube";
+import FeaturedCourses from "@/components/FeaturedCourses";
 import Heading from "@/components/Heading";
 import Hero from "@/components/Hero";
 import StudentTypes from "@/components/StudentTypes";
@@ -30,13 +33,24 @@ export default function Home() {
       </div>
       <Hero />
       <div className="mt-8 sm:mt-16">
-        {/* <div className="text-center">
-          <Heading title="Featured Languages" />
-        </div> */}
         <FeaturedLanguages />
       </div>
       {/* <FindOut /> */}
       <StudentTypes />
+      <div className="">
+        <Cube />
+      </div>
+      <div className="relative">
+        <Image
+          src="grid.svg"
+          alt="background"
+          width={1572}
+          height={795}
+          className="absolute -top-28 -z-10"
+          style="color: transparent"
+        />
+      </div>
+      <CourseList />
     </section>
   );
 }

@@ -86,3 +86,168 @@ body {
   // --tw-text-opacity: 1;
   // color: rgb(211 216 232 / var(--tw-text-opacity));
 }
+.course-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  // color: transparent;
+}
+
+$width: 200px;
+$height: 200px;
+
+//colors for cube that is spinning horizontally
+$color-Hfront: #40b9dc;
+$color-Hback: #3dbadf;
+$color-Htop: #5acaec;
+$color-Hbottom: #82daf4;
+$color-Hleft: #a3e5f9;
+$color-Hright: #67d6f7;
+
+//colors for cube that is spinning vertically
+$color-Vfront: #8c31a5;
+$color-Vback: #8e43a3;
+$color-Vtop: #ab69bd;
+$color-Vbottom: #d69de5;
+$color-Vleft: #c060da;
+$color-Vright: #c976e0;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
+.container {
+  @include flex;
+  min-height: 100vh;
+
+  .cube-container {
+    perspective: 800px;
+    @include flex {
+      flex-direction: column;
+    }
+
+    .cube {
+      transition: transform 2s ease-in;
+      transform-style: preserve-3d;
+      width: $width;
+      height: $height;
+      margin: 50px 0;
+
+      &.cube1 {
+        animation: horizontal-spin 10s infinite linear;
+      }
+
+      &.cube2 {
+        animation: vertical-spin 5s infinite linear;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        @include flex;
+
+        &.front {
+          background: $color-Hfront;
+          transform: translateZ(($width/2));
+        }
+
+        &.box2 {
+          &.front {
+            background: $color-Vfront;
+          }
+        }
+
+        &.back {
+          background: $color-Hback;
+          transform: translateZ(-($width/2)) rotateY(180deg);
+        }
+
+        &.box2 {
+          &.back {
+            background: $color-Vback;
+            transform: translateZ(-($width/2)) rotateX(-180deg);
+          }
+        }
+
+        &.top {
+          background: $color-Htop;
+          transform: rotateX(-90deg) translateY(-($width/2));
+          transform-origin: top center;
+        }
+
+        &.box2 {
+          &.top {
+            background: $color-Vtop;
+            transform: rotateX(90deg) translateY(-($width/2));
+          }
+        }
+
+        &.bottom {
+          background: $color-Hbottom;
+          transform: rotateX(90deg) translateY(($width/2));
+          transform-origin: bottom center;
+        }
+
+        &.box2 {
+          &.bottom {
+            background: $color-Vbottom;
+            transform: rotateX(-90deg) translateY(($width/2));
+          }
+        }
+
+        &.left {
+          background: $color-Hleft;
+          transform: rotateY(270deg) translateX(-($width/2));
+          transform-origin: center left;
+        }
+        &.box2 {
+          &.left {
+            background: $color-Vleft;
+          }
+        }
+        &.right {
+          background: $color-Hright;
+          transform: rotateY(-270deg) translateX(($width/2));
+          transform-origin: top right;
+        }
+        &.box2 {
+          &.right {
+            background: $color-Vright;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes horizontal-spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes vertical-spin {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
