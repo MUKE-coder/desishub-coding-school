@@ -347,9 +347,9 @@ export default function Header() {
             {/* Single Link */}
 
             <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <Link href="/thecodementor" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Desishub
+                  theCodeMentor
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>

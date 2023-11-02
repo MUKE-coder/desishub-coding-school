@@ -36,11 +36,11 @@ export default function Home() {
         <FeaturedLanguages />
       </div>
       {/* <FindOut /> */}
-      <StudentTypes />
-      <div className="">
+      <div className="py-6">
         <Cube />
       </div>
-      <div className="relative">
+      <StudentTypes />
+      {/* <div className="relative">
         <Image
           src="grid.svg"
           alt="background"
@@ -49,8 +49,10 @@ export default function Home() {
           className="absolute -top-28 -z-10"
           style="color: transparent"
         />
-      </div>
-      <CourseList />
+      </div> */}
+      <section className="bg-slate-900">
+        <CourseList />
+      </section>
     </section>
   );
 }

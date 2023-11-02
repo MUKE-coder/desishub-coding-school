@@ -80,6 +80,15 @@
 .text-primary {
   color: #38bdf8;
 }
+@layer components {
+  section {
+    @apply mt-14 py-8 px-6 max-w-7xl mx-auto md:px-8  2xl:max-w-7xl;
+  }
+}
+::selection {
+  color: #ec4899;
+  background: #020617; /* Change the background color as desired */
+}
 body {
   // --tw-bg-opacity: 1;
   // background-color: rgb(13 18 36 / var(--tw-bg-opacity));
@@ -249,5 +258,13 @@ $color-Vright: #c976e0;
   }
   to {
     transform: rotateX(360deg);
+  }
+}
+
+.slanted {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+  height: 75vh;
+  @media (max-width: 480px) {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 }

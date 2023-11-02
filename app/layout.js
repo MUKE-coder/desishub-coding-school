@@ -14,9 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark">
       <body className={inter.className}>
         <Header />
-        <main className="mt-14 py-8 px-6 max-w-7xl mx-auto  md:px-8  2xl:max-w-7xl">
-          {children}
-        </main>
+        <main className="mt-14">{children}</main>
       </body>
     </html>
   );

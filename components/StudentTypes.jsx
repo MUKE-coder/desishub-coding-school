@@ -42,16 +42,15 @@ export default function StudentTypes() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
         <div className="w-full flex flex-col gap-4  ">
           <h1 className="text-[1.65rem] sm:text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-8 sm:leading-10">
-            <span className="text-green-400">Learning</span> to{" "}
-            <span className="text-pink-500">Code</span> has never been easier
+            Your <span className="text-green-400">Education</span> Level{" "}
+            <span className="text-pink-500">don't matter</span>, what matters is
+            your passion and commitment to change your life ...
           </h1>
           <p>
-            Our mission is to empower a diverse range of individuals, from high
-            school students and job seekers to tech enthusiasts and university
-            graduates. Whether you're a novice eager to delve into coding, a
-            career changer, a tech enthusiast hungry for knowledge, or a recent
-            graduate seeking practical skills, our inclusive programs are
-            customized to meet your specific needs.
+            Whether you're a recent graduate, a tech enthusiast, a high school
+            student, or even a school dropout, our hands-on, step-by-step
+            project-based courses will guide you on a journey from zero to hero.
+            🌟
           </p>
         </div>
         <div className="w-full grid grid-cols-2 gap-4  justify-center mx-auto my-10 sm:my-20 ">

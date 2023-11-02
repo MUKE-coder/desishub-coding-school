@@ -49,3 +49,4 @@ https://keen-slider.io/examples#autoplay
 # Email Marketing
 
 https://convertkit.com/pricing
+https://www.youtube.com/watch?v=Rrz2q5uCHdE
