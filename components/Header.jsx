@@ -27,6 +27,7 @@ import { cn } from "@/lib/utils";
 import { useRef, useState } from "react";
 import { AiOutlineMedicineBox, AiOutlineUsergroupAdd } from "react-icons/ai";
 import { MdOutlineAltRoute } from "react-icons/md";
+import Image from "next/image";
 export default function Header() {
   const resources = [
     {
@@ -240,7 +241,7 @@ export default function Header() {
       <div className="flex justify-between items-center sm:px-16 px-4 py-8 w-full top-0 fixed h-14 bg-slate-950 z-50">
         <Link href="/">
           <img
-            src="logo-red.png"
+            src="/logo-red.png"
             className="h-14"
             alt="desishub coding school logo"
           />

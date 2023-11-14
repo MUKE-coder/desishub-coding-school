@@ -11,7 +11,7 @@ export default function Course() {
   return (
     <div className="border border-gray-600  transition-colors duration-200 ease-in-out overflow-hidden rounded-lg bg-slate-900  relative max-w-[350px]">
       <div className="h-[196px] relative">
-        <Link className="relative w-full h-full inline-block" href="/">
+        <Link className="relative w-full h-full inline-block" href="/waitlist">
           <Image
             sizes="350px"
             className="object-cover course-image"
