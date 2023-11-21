@@ -50,3 +50,6 @@ https://keen-slider.io/examples#autoplay
 
 https://convertkit.com/pricing
 https://www.youtube.com/watch?v=Rrz2q5uCHdE
+
+//UDEMY
+https://www.udemy.com/course/full-stack-development-with-next-js-typescript/

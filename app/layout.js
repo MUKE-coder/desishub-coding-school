@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark">
       <body className={inter.className}>
         <Toaster position="top-center" reverseOrder={false} />
-        <Header />
         <main className="mt-14">{children}</main>
       </body>
     </html>
