@@ -1,10 +1,13 @@
 "use client";
 import { Search, Download } from "lucide-react";
+import { useState } from "react";
 import CsvDownloader from "react-csv-downloader";
 export default function TableHeaderActions({ columns, datas, fileName }) {
+  const [searchTerm, setSearchTerm] = useState("");
+  console.log(searchTerm);
   return (
-    <div className="flex justify-between pb-8">
-      <form class="flex items-center w-1/2">
+    <div className="flex justify-between pb-8 flex-col sm:flex-row gap-4">
+      <form class="flex items-center w-full sm:w-1/2">
         <label for="voice-search" class="sr-only">
           Search
         </label>
@@ -27,6 +30,7 @@ export default function TableHeaderActions({ columns, datas, fileName }) {
             </svg>
           </div>
           <input
+            onChange={(e) => setSearchTerm(e.target.value)}
             type="text"
             id="voice-search"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -66,7 +70,7 @@ export default function TableHeaderActions({ columns, datas, fileName }) {
         <Download />
         <CSVLink data={data}>Export to Cv</CSVLink>
       </button> */}
-      <div>
+      <div className="w-full sm:w-1/2">
         <CsvDownloader
           filename={fileName}
           extension=".csv"
