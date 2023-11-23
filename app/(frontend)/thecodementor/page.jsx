@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import codeImage from "../../public/theCode.png";
+// import codeImage from "../../public/theCode.png";
 
 export default function Page() {
   return (
@@ -31,7 +31,7 @@ export default function Page() {
             <div className="grid md:grid-cols-2 items-center gap-4 ">
               <div className="col-span-full md:col-span-1">
                 <Image
-                  src={codeImage}
+                  src="/theCode.png"
                   alt="theCodeMentor by JB"
                   width={1000}
                   height={600}
