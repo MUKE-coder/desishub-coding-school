@@ -18,7 +18,7 @@ export default function DataTable({
   const itemStartIndex = startIndex + 1;
   const itemEndIndex = Math.min(startIndex + PAGE_SIZE, data.length);
   return (
-    <div className="relative shadow-md sm:rounded-lg">
+    <div className="relative shadow-md sm:rounded-lg ">
       {currentlyDisplayedData.length > 0 ? (
         <>
           <table className="w-full min-w-full text-sm text-left text-gray-500 dark:text-gray-400 overflow-x-auto">

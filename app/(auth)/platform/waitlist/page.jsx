@@ -5,6 +5,7 @@ import React from "react";
 import Heading from "@/components/backoffice/Heading";
 export default async function page() {
   const waitlists = await getData("waitlist");
+  // console.log(waitlists);
   const columns = ["firstName", "lastName", "email", "createdAt"];
   const csvColumns = [
     {
