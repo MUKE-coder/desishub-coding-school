@@ -17,3 +17,24 @@ model Waitlist {
 createdAt DateTime @default(now())
 updatedAt DateTime @updatedAt
 }
+model Puser {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  email       String    @unique
+  fullName    String?
+  suggestedProjects SuggestedProject[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model SuggestedProject {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  design   String?
+  description String?
+  techStack   String?
+  votes       Int       @default(0)
+  puserId      String @db.ObjectId
+  puser        Puser      @relation(fields: [puserId], references: [id])
+  status      Boolean   @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
