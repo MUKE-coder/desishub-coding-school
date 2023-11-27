@@ -1,5 +1,4 @@
 import { UploadDropzone } from "@/utils/uploadthing";
-import { useAuth } from "@clerk/nextjs";
 import { Paperclip, Pencil, Plus, Watch } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

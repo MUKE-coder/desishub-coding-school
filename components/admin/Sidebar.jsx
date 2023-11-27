@@ -17,28 +17,23 @@ export default function Sidebar({ isOpen, setIsOpen }) {
   const sidebarLinks = [
     {
       title: "Dashboard",
-      href: "/dashboard",
+      href: "/platform",
       icon: LayoutDashboard,
     },
     {
-      title: "Browse",
-      href: "/dashboard/browse-courses",
+      title: "Bootcamp",
+      href: "/platform/bootcamp",
       icon: GraduationCap,
     },
     {
-      title: "Courses",
-      href: "/dashboard/courses",
+      title: "Project Ideas",
+      href: "/platform/suggested-projects",
       icon: BookPlus,
     },
     {
-      title: "Students",
-      href: "/dashboard/students",
+      title: "Waitlist",
+      href: "/platform/waitlist",
       icon: Users,
-    },
-    {
-      title: "Notifications",
-      href: "/dashboard/notifications",
-      icon: BellDot,
     },
   ];
   const pathname = usePathname();
