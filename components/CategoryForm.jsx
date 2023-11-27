@@ -2,7 +2,7 @@
 import SubmitButton from "@/components/FormInputs/SubmitButton";
 import TextInput from "@/components/FormInputs/TextInput";
 import TextareaInput from "@/components/FormInputs/TextareaInput";
-import { makePostRequest } from "@/libs/apiRequest";
+import { makePostRequest } from "@/lib/apiRequest";
 import { Plus, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
