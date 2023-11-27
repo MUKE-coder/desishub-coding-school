@@ -8,7 +8,9 @@ import React from "react";
 
 export default async function page() {
   const projectIdeas = await getData("suggested-projects");
-  const approvedIdeas = projectIdeas.filter((item) => item.status);
+
+  const approvedIdeas = projectIdeas?.filter((item) => item.status);
+  console.log(approvedIdeas);
   return (
     <div className="lg:p-16 p-8 mt-8 ">
       <div className="max-w-5xl mx-auto text-center">
