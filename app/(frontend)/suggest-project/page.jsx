@@ -8,9 +8,8 @@ import React from "react";
 
 export default async function page() {
   const projectIdeas = await getData("suggested-projects");
-
   const approvedIdeas = projectIdeas?.filter((item) => item.status);
-  console.log(approvedIdeas);
+  // console.log(approvedIdeas);
   return (
     <div className="lg:p-16 p-8 mt-8 ">
       <div className="max-w-5xl mx-auto text-center">
@@ -27,13 +26,13 @@ export default async function page() {
       <div className="max-w-4xl mx-auto grid grid-col-1 mt-16">
         <ProjectSuggestionForm />
       </div>
-      {approvedIdeas.length > 0 && (
+      {approvedIdeas?.length > 0 && (
         <>
           <h2 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text font-bold text-3xl md:text-4xl lg:text-6xl py-8 mb-4 max-w-7xl mx-auto mt-16">
             All projects
           </h2>
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-8 gap-4 lg:gap-8">
-            {approvedIdeas.map((item, i) => {
+            {approvedIdeas?.map((item, i) => {
               return (
                 <div
                   key={i}
