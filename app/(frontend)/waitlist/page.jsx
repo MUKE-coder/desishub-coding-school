@@ -1,7 +1,14 @@
 import WaitListForm from "@/components/WaitListForm";
 import Image from "next/image";
 import React from "react";
-
+export const metadata = {
+  title: "Join the Desishub Next.js Course Waitlist",
+  description:
+    "Sign up for our Next.js course waitlist and be the first to know when registration opens. Learn the latest Next.js concepts and skills from our expert instructors.",
+  keywords:
+    "Next.js course waitlist, Next.js training, Next.js online courses, Desishub Coding School",
+  favicon: "/favicon.ico", // Replace with the URL of your favicon image
+};
 export default function page() {
   return (
     <div className="lg:p-16 p-8 mt-8 ">
