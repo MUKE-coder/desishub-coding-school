@@ -48,7 +48,7 @@ export default async function page() {
                   <p className="text-slate-800 py-3 border-b border-gray-400">
                     Stack: {item.techStack}
                   </p>
-                  <div className="flex justify-between items-center text-slate-800 py-4">
+                  <div className="flex justify-between items-center text-slate-800 py-4 border-b border-gray-400">
                     <a target="_blank" href={item.design}>
                       View Project Concept
                     </a>
@@ -57,6 +57,12 @@ export default async function page() {
                       {item.votes}
                     </div>
                     <VoteButton id={1} />
+                  </div>
+                  <div className="flex items-center py-4 justify-between">
+                    <p className="text-slate-900 text-sm">Suggested By: </p>
+                    <small className="font-bold text-pink-800">
+                      {item?.puser?.fullName}
+                    </small>
                   </div>
                 </div>
               );

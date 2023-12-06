@@ -1,7 +1,4 @@
 "use client";
-import SubmitButton from "@/components/FormInputs/SubmitButton";
-import TextInput from "@/components/FormInputs/TextInput";
-import TextareaInput from "@/components/FormInputs/TextareaInput";
 import { makePostRequest } from "@/lib/apiRequest";
 import { Plus, X } from "lucide-react";
 import Link from "next/link";
@@ -10,6 +7,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import toast from "react-hot-toast";
+import TextInput from "./FormInputs/TextInput";
+import TextAreaInput from "./FormInputs/TextAreaInput";
+import SubmitButton from "./FormInputs/SubmitButton";
 
 export default function ProjectSuggestionForm() {
   const router = useRouter();
@@ -44,7 +44,7 @@ export default function ProjectSuggestionForm() {
     <div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full max-w-5xl p-4 bg-white border border-slate-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-slate-50 dark:border-slate-700 mx-auto my-3"
+        className="w-full max-w-5xl p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 mx-auto my-3"
       >
         {successMsg && (
           <p className="bg-lime-600 py-6 px-4 rounded-lg max-w-2xl mx-auto mb-8">
@@ -91,7 +91,7 @@ export default function ProjectSuggestionForm() {
             register={register}
             errors={errors}
           />
-          <TextareaInput
+          <TextAreaInput
             label="Describe Your Project so that we can Understand it"
             name="description"
             register={register}
@@ -100,8 +100,8 @@ export default function ProjectSuggestionForm() {
         </div>
         <SubmitButton
           isLoading={loading}
-          loadingMessage="Adding Project Please Wait ..."
-          title="Add Project Idea"
+          buttonTitle="Add Project Idea"
+          loadingButtonTitle="Adding Project Please Wait ..."
         />
       </form>
     </div>

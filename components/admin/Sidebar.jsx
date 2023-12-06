@@ -1,6 +1,7 @@
 "use client";
 import {
   BellDot,
+  Book,
   BookPlus,
   GraduationCap,
   LayoutDashboard,
@@ -34,6 +35,11 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       title: "Waitlist",
       href: "/platform/waitlist",
       icon: Users,
+    },
+    {
+      title: "Courses",
+      href: "/platform/courses",
+      icon: Book,
     },
   ];
   const pathname = usePathname();

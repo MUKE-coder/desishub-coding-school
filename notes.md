@@ -5,3 +5,5 @@ https://www.codewithantonio.com/
 https://codedamn.com/projects
 https://codewithmosh.com/p/ultimate-nextjs-series
 https://codedamn.com/learn/nextjs#buy
+
+https://themes.pixelwars.org/efor/demo-07/

@@ -3,7 +3,9 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
-
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { extractRouterConfig } from "uploadthing/server";
+import { ourFileRouter } from "./api/uploadthing/core";
 export const metadata = {
   title:
     "Desishub Coding School: Learn Programming Languages & Web Development",
@@ -18,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
+        <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
         <Toaster position="top-center" reverseOrder={false} />
         <main className="">{children}</main>
       </body>

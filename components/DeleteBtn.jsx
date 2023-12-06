@@ -9,6 +9,7 @@ export default function DeleteBtn({ id, endpoint }) {
   const [loading, setLoading] = useState(false);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const router = useRouter();
+
   // const confirmed = confirm("Are you sure?");
   async function handleDelete() {
     setLoading(true);

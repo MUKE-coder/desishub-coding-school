@@ -83,6 +83,9 @@ export async function GET(request) {
       orderBy: {
         createdAt: "desc", //Latest projs
       },
+      include: {
+        puser: true,
+      },
     });
     return NextResponse.json(projects);
   } catch (error) {

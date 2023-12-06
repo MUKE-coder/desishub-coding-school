@@ -47,3 +47,76 @@ model SuggestedProject {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+// Define the Course model
+model Course {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title               String
+  slug               String @unique
+  description         String?
+  courseImage         String?
+  nowPrice            Float?
+  soonPrice           Float?
+  laterPrice          Float?
+  isPublished         Boolean @default(true)
+  enrolledStudentCount Int?
+  courseOverview      String[]
+  keywords          String[]
+  courseIntroLink     String?
+  whatYouWillLearn    String[]
+  courseFor           String[]
+  prerequisites       String[]
+  whatWillYouBuild    String[]
+  attachment          String?
+  isPaid              Boolean @default(true)
+  sections            Section[] // One-to-many relation with Section
+  attachments            Attachment[] // One-to-many relation with Attatchment
+  faqs                FAQ[]     // One-to-many relation with FAQ
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Define the Section model
+model Section {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String?
+  course      Course   @relation(fields: [courseId], references: [id]) // Many-to-one relation with Course
+  courseId    String   @db.ObjectId
+  lessons     Lesson[] // One-to-many relation with Lesson
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Define the Lesson model
+model Lesson {
+ id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  isVideo  Boolean
+  videoUrl String?
+  fileUrl  String?
+  isPublic Boolean
+  section  Section @relation(fields: [sectionId], references: [id]) // Many-to-one relation with Section
+  sectionId String  @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Define the FAQ model
+model FAQ {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  question String
+  answer   String
+  course   Course  @relation(fields: [courseId], references: [id]) // Many-to-one relation with Course
+  courseId String  @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Attachment {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  url   String
+  course   Course  @relation(fields: [courseId], references: [id]) // Many-to-one relation with Course
+  courseId String  @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
