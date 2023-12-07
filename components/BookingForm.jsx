@@ -3,6 +3,7 @@ import SubmitButton from "@/components/FormInputs/SubmitButton";
 import TextInput from "@/components/FormInputs/TextInput";
 import TextareaInput from "@/components/FormInputs/TextareaInput";
 import { makePostRequest } from "@/lib/apiRequest";
+import { generateUserCode } from "@/lib/generateUserCode";
 import { Plus, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -11,7 +12,7 @@ import { useForm } from "react-hook-form";
 
 import toast from "react-hot-toast";
 
-export default function BootcampForm() {
+export default function BookingForm() {
   const router = useRouter();
   const {
     register,
@@ -21,16 +22,45 @@ export default function BootcampForm() {
   } = useForm();
   const [loading, setLoading] = useState(false);
   function redirect() {
-    router.push("/dashboard/inventory/categories");
+    router.push("https://gmukejohnbaptist.gumroad.com/l/ecommerce");
   }
   async function onSubmit(data) {
-    makePostRequest(
-      setLoading,
-      "api/bootcamp",
-      data,
-      "You have been successfully added to the Bootcamp",
-      reset
-    );
+    const regNo = generateUserCode("CCL", data.firstName);
+    data.regNo = regNo;
+    try {
+      console.log(data);
+      setLoading(true);
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+      const response = await fetch(`${baseUrl}/api/bookings`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const responseData = await response.json();
+      if (response.ok) {
+        console.log(responseData);
+        setLoading(false);
+        toast.success("Joined Class Created Successfully");
+        reset();
+        router.push(`/booking/${responseData.data.id}/credentials`);
+      } else {
+        setLoading(false);
+        if (response.status === 409) {
+          setEmailErr("User with this Email already exists");
+          toast.error("User with this Email already exists");
+        } else {
+          // Handle other errors
+          console.error("Server Error:", responseData.error);
+          toast.error("Oops Something Went wrong");
+        }
+      }
+    } catch (error) {
+      setLoading(false);
+      console.error("Network Error:", error);
+      toast.error("Something Went wrong, Please Try Again");
+    }
   }
   return (
     <div>
@@ -39,6 +69,10 @@ export default function BootcampForm() {
         onSubmit={handleSubmit(onSubmit)}
         className="w-full max-w-6xl p-4 bg-white border border-slate-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-slate-700 dark:border-slate-700 mx-auto my-3"
       >
+        <h2 className="text-slate-300 text-center text-2xl sm:text-2xl border-b border-slate-500 pb-3 mb-6">
+          {" "}
+          Fill in the Info Below to Enroll to one-on-one coaching program
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
           <TextInput
             label="First Name"
@@ -73,7 +107,7 @@ export default function BootcampForm() {
         </div>
         <SubmitButton
           isLoading={loading}
-          buttonTitle="Join Bootcamp"
+          buttonTitle="Join Class"
           loadingButtonTitle="Adding you Please Wait ..."
         />
       </form>
