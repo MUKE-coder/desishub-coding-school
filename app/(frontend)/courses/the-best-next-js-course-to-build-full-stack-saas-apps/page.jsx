@@ -1,5 +1,6 @@
 "use client";
 import FeaturedLanguages from "@/components/CareerPath/FeaturedLanguages";
+import CustomAccordion from "@/components/CustomAccordion";
 import {
   Check,
   ChevronRight,
@@ -138,6 +139,65 @@ export default function Course() {
       ],
     },
   ];
+
+  const FAQs = [
+    {
+      qn: "What do I need to know to take this course?",
+      ans: "To take this course you’ll need intermediate JavaScript knowledge and beginner React knowledge. You don’t need any Next.js or Typescript knowledge. If you don’t meet the requirements above, don’t worry! There will be a 1hr optional crash course covering all the Js you need to get started with react",
+    },
+    {
+      qn: "What does the course cover?",
+      ans: "The course covers Next.js basics, Next.js with TypeScript, building a full-stack Next.js application with Prisma, MongoDB, MySQL, Stripe Billing, Lemon Squeezy,Tailwind, and Mails with Resend. You'll also build three SaaS applications: a Next.js SaaS boilerplate, a medical app, and a banking app.",
+    },
+    {
+      qn: "This course is too expensive for me",
+      ans: "I understand that the price of this course may seem high at first glance. However, I want to assure you that I have carefully considered the value it offers and set the price accordingly.I have spoken with numerous developers from various backgrounds, including business owners in the USA, system administrators in Nigeria, and junior developers in India. Based on their feedback and the comprehensive content of the course, I believe it represents exceptional value for money. Consider the following:You are learning the most in-demand tech skills currently, which puts you ahead of the curve. This knowledge can open doors to career advancement, increased earning potential, and freelance opportunities.The course includes a comprehensive guide on how to find freelance clients, allowing you to start earning money immediately.The course provides valuable guidance on building and scaling your own applications, which can significantly increase your user base and potential revenue.When you consider the potential return on investment, the course price becomes much more justifiable. In fact, it could be the best investment you make in your career.If you are still hesitant, I encourage you to compare my course to other offerings on platforms like Udemy. You will quickly see that the depth of knowledge, hands-on projects, and personalized support I offer are unmatched at this price point.Ultimately, the decision is yours. I am confident that my course offers exceptional value and will equip you with the skills you need to achieve your career goals. However, I also respect your budget and understand that it may not be the right fit for everyone.",
+    },
+    {
+      qn: "It’s just another watch-along course. I won’t actually be able to code this myself. Just copy what you did.",
+      ans: "Nope! In this course, we’re doing everything from scratch.I’ll explain every decision and show why and how I chose to do this.Whenever we do anything, I’ll show you how we found this in the docs and how to translate this into a feature in our app.Not to mention the active lessons where you will code the most important parts of the app and master the features of Next14 to guarantee you walk away with a deep understanding and the skills to build stunning apps with Next14.",
+    },
+    {
+      qn: "How is this course different than your YouTube videos?",
+      ans: "While my YouTube videos provide valuable insights into various web development topics, including Next.js, this course offers a significantly deeper and more comprehensive learning experience. Here are some key differences:1. Structured learning path: The course follows a carefully designed curriculum that progresses logically, ensuring you build a solid foundation in Next.js and its related technologies. This structured learning path facilitates deeper understanding compared to individual YouTube videos, which may not always offer a cohesive learning experience.2). Hands-on coding exercises: The course goes beyond simply explaining concepts; it emphasizes practical application through hands-on coding exercises. You'll build unique applications that solidify your understanding and equip you with the skills to confidently build your own projects. 3). Active learning: This is not a passive watching experience. The course promotes active learning by encouraging you to code along with me and tackle challenges independently. This active participation leads to a more profound understanding and mastery of the material.4. Uncommon applications: We build applications not readily found online for this specific tech stack. This allows you to explore advanced concepts and gain valuable experience with practical use cases.5). Community and support: You'll gain access to a supportive community of developers and participate in weekly one-on-one sessions and a WhatsApp group. This fosters a collaborative learning environment where you can ask questions, receive feedback, and connect with other learners.In essence, this course offers a structured, hands-on, and interactive learning experience that goes far beyond the scope of my YouTube videos. It provides the necessary tools and support to help you master Next.js and build stunning applications.",
+    },
+    {
+      qn: "Are the course materials up-to-date?",
+      ans: "Yes, the course materials are constantly updated to reflect the latest versions of Next.js, TypeScript, and other relevant technologies.",
+    },
+    {
+      qn: "What is the duration of the course?",
+      ans: "The course contains approximately 60+ hours of video content, covering all concepts at a detailed pace.",
+    },
+    {
+      qn: "What kind of projects will I build in the course?",
+      ans: "You will build three practical SaaS applications: a Next Js Fullstack Portfolio, Next.js SaaS boilerplate, a medical app, and a banking app. These projects are designed to give you hands-on experience with all the concepts covered in the course.",
+    },
+    {
+      qn: "What are the career opportunities after completing this course?",
+      ans: "This course equips you with the skills to become a full-stack Next.js developer and build SaaS applications. You can pursue careers as a Software Engineer, Full-Stack Developer, or Frontend Developer specializing in Next.js and SaaS development.",
+    },
+    {
+      qn: "Is there a certificate of completion offered?",
+      ans: "Yes, upon completing the course and passing any assessments, you will receive a certificate of completion to showcase your acquired skills.",
+    },
+    {
+      qn: "What happens if I get stuck or have questions?",
+      ans: "The course provides access to a supportive community forum where you can ask questions, get help from fellow students and instructors, and discuss course topics.",
+    },
+    {
+      qn: "Can I buy this course even if I don’t know TypeScript?",
+      ans: "Yes, yes, yes! i teach by building apps. You’ll not only learn Next14 but build a strong base of TypeScript knowledge. TypeScript is used in most industry-level projects these days, so this is a perfect chance to learn it.",
+    },
+    {
+      qn: "Can I purchase multiple licenses, for my team or group?",
+      ans: "Certainly! You have the option to acquire multiple licenses using the toggle in the pricing section.",
+    },
+    {
+      qn: "Why does it even matter? AI will just replace me :(",
+      ans: "AI is exactly why you should take this course.AI can now output decent code, which means a developer that uses AI can do more than they did before. If 10 devs now do the work of 12 devs, those two are not necessary and they just lost a job.Here’s how to not get replaced:Be more than someone that just writes code.An AI doesn’t understand the big picture. How an app should look like start to finish. How to create the best experience for the users. How to make the right decision that will make a huge impact on the clients. Not to mention that right now, if you ask ChatGPT to do x, it will give you a mediocre and unoptimized solution.AI will empower those with deep understanding and replace the mediocre devs. Understanding how the code truly works gives you the ability to prompt well as AI advances. Understanding is the key to the future. And deep understanding is exactly what you will get in this course.",
+    },
+  ];
   return (
     <div className="mx-auto mt-32 flex flex-1 flex-col items-center justify-center space-y-10">
       <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm font-normal text-transparent shadow shadow-gray-700">
@@ -214,7 +274,7 @@ export default function Course() {
           <div className="mt-8 sm:mt-16">
             <FeaturedLanguages languages={languages} />
           </div>
-          <div className="mx-auto flex items-center justify-center py-8">
+          <div className="mx-auto flex items-center justify-center py-8 mt-8">
             <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
           </div>
           <div className="mt-8">
@@ -230,7 +290,7 @@ export default function Course() {
               available to you instantly. Build off our boilerplate and spend
               more time building your startup.
             </p>
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 gap-8 mt-8">
               {features.map((feature, i) => {
                 const Icon = feature.icon;
                 return (
@@ -254,6 +314,12 @@ export default function Course() {
                 );
               })}
             </div>
+          </div>
+          <div className="mt-8 max-w-3xl mx-auto">
+            <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm font-normal text-transparent shadow shadow-gray-700 mb-8">
+              Frequently Asked Questions (FAQs)
+            </h2>
+            <CustomAccordion faqs={FAQs} />
           </div>
         </div>
       </div>
