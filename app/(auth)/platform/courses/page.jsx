@@ -5,12 +5,12 @@ import Link from "next/link";
 import React from "react";
 
 export default async function Courses() {
-  const courses = await getData("courses");
+  const courses = (await getData("courses")) ?? [];
   return (
     <div className="">
       <h2 className="border-b border-slate-600 pb-4">Your Courses</h2>
       <div className="">
-        {courses.map((course, i) => {
+        {courses?.map((course, i) => {
           return (
             <div
               className="flex items-center gap-4 justify-between py-4 border-b border-slate-600"
