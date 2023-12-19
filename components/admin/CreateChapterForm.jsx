@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import { generateSlug } from "@/utils/generateSlug";
 import TextInput from "@/components/FormInputs/TextInput";
 import ToggleInput from "@/components/FormInputs/ToggleInput";
-import TextareaInput from "@/components/FormInputs/TextAreaInput";
+import TextareaInput from "@/components/FormInputs/TextareaInput";
 import SelectInput from "@/components/FormInputs/SelectInput";
 import SubmitButton from "@/components/FormInputs/SubmitButton";
 import { makePostRequest } from "@/utils/apiRequest";

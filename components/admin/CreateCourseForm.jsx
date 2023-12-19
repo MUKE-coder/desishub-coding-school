@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import TextInput from "@/components/FormInputs/TextInput";
-import TextareaInput from "@/components/FormInputs/TextAreaInput";
+import TextareaInput from "@/components/FormInputs/TextareaInput";
 import ArrayItemsInput from "@/components/FormInputs/ArrayItemsInput";
 import ImageInput from "@/components/FormInputs/ImageInput";
 import ToggleInput from "@/components/FormInputs/ToggleInput";

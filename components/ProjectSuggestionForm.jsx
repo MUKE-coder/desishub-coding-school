@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 
 import toast from "react-hot-toast";
 import TextInput from "@/components/FormInputs/TextInput";
-import TextAreaInput from "@/components/FormInputs/TextAreaInput";
+import TextareaInput from "@/components/FormInputs/TextareaInput";
 import SubmitButton from "@/components/FormInputs/SubmitButton";
 
 export default function ProjectSuggestionForm() {
@@ -91,7 +91,7 @@ export default function ProjectSuggestionForm() {
             register={register}
             errors={errors}
           />
-          <TextAreaInput
+          <TextareaInput
             label="Describe Your Project so that we can Understand it"
             name="description"
             register={register}

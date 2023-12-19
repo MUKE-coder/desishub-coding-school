@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import TextAreaInput from "@/components/FormInputs/TextAreaInput";
+import TextareaInput from "@/components/FormInputs/TextareaInput";
 
 export default function CreateSectionForm({ courseId, slug }) {
   const [loading, setLoading] = useState(false);
@@ -69,7 +69,7 @@ export default function CreateSectionForm({ courseId, slug }) {
             register={register}
             errors={errors}
           />
-          <TextAreaInput
+          <TextareaInput
             label="Section Description"
             name="description"
             register={register}
