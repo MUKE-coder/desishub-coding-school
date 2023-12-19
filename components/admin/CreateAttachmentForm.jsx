@@ -6,10 +6,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import TextInput from "../FormInputs/TextInput";
-import SelectInput from "../FormInputs/SelectInput";
-import AttachmentFileInput from "../FormInputs/AttachmentFileInput";
-import SubmitButton from "../FormInputs/SubmitButton";
+import TextInput from "@/components/FormInputs/TextInput";
+import SelectInput from "@/components/FormInputs/SelectInput";
+import AttachmentFileInput from "@/components/FormInputs/AttachmentFileInput";
+import SubmitButton from "@/components/FormInputs/SubmitButton";
 
 export default function CreateAttachmentForm({ courses }) {
   const {

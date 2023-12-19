@@ -7,9 +7,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import toast from "react-hot-toast";
-import TextInput from "./FormInputs/TextInput";
-import TextAreaInput from "./FormInputs/TextAreaInput";
-import SubmitButton from "./FormInputs/SubmitButton";
+import TextInput from "@/components/FormInputs/TextInput";
+import TextAreaInput from "@/components/FormInputs/TextAreaInput";
+import SubmitButton from "@/components/FormInputs/SubmitButton";
 
 export default function ProjectSuggestionForm() {
   const router = useRouter();

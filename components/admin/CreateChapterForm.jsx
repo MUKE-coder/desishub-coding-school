@@ -6,11 +6,11 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { generateSlug } from "@/utils/generateSlug";
-import TextInput from "../FormInputs/TextInput";
-import ToggleInput from "../FormInputs/ToggleInput";
-import TextareaInput from "../FormInputs/TextAreaInput";
-import SelectInput from "../FormInputs/SelectInput";
-import SubmitButton from "../FormInputs/SubmitButton";
+import TextInput from "@/components/FormInputs/TextInput";
+import ToggleInput from "@/components/FormInputs/ToggleInput";
+import TextareaInput from "@/components/FormInputs/TextAreaInput";
+import SelectInput from "@/components/FormInputs/SelectInput";
+import SubmitButton from "@/components/FormInputs/SubmitButton";
 import { makePostRequest } from "@/utils/apiRequest";
 
 export default function CreateChapterForm({ courses }) {
