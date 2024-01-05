@@ -1,5 +1,6 @@
 "use client";
 import FeaturedLanguages from "@/components/CareerPath/FeaturedLanguages";
+import CourseOutline from "@/components/CourseOutline";
 import CustomAccordion from "@/components/CustomAccordion";
 import {
   Check,
@@ -277,6 +278,17 @@ export default function Course() {
           <div className="mx-auto flex items-center justify-center py-8 mt-8">
             <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
           </div>
+          {/* Course Outline */}
+          <div className="mt-8">
+            <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm font-normal text-transparent shadow shadow-gray-700">
+              Course Roadmap
+            </h2>
+            <h2 className="pt-6 text-white text-4xl font-bold">
+              Course Modules and Topics
+            </h2>
+            <CourseOutline />
+          </div>
+          {/*  */}
           <div className="mt-8">
             <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm font-normal text-transparent shadow shadow-gray-700">
               With more than 100+ hours of HD Video Content, Learning at 2x
