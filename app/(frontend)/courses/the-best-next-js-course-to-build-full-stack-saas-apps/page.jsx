@@ -283,7 +283,7 @@ export default function Course() {
         <div className="flex items-center justify-center">
           <button className="inline-flex items-center justify-center font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:[&>*]:translate-y-0.5 bg-primary text-primary-foreground hover:bg-primary/90 text-sm h-10 [&>*]:py-2 [&>*]:px-4 rounded-full PreviewButton text-white ">
             <a
-              href=""
+              href="#"
               className="flex w-full h-full items-center transition-transform duration-500 ease-out undefined"
             >
               <span className="flex w-full flex-1 items-center justify-center">
@@ -295,7 +295,7 @@ export default function Course() {
         </div>
         <div className="py-16 lg:py-24">
           <h2 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text font-bold text-3xl md:text-4xl lg:text-5xl textGradient">
-            We will Build 4 Apps with Next Js 14
+            We will Build 4 Apps with Next Js 14 and TypeScript
           </h2>
           <p className="py-4">
             It's NOT just another COURSE.This is the practical and interactive
