@@ -2,6 +2,7 @@
 import FeaturedLanguages from "@/components/CareerPath/FeaturedLanguages";
 import CourseOutline from "@/components/CourseOutline";
 import CustomAccordion from "@/components/CustomAccordion";
+import PricingPlan from "@/components/PricingPlan";
 import {
   Check,
   ChevronRight,
@@ -59,14 +60,14 @@ export default function Course() {
       logo: "/logos/git.svg",
     },
   ];
-  const studentTypes = [
+  const projects = [
     {
-      title: "Next Js Saas Boilerplate",
+      title: "Fullstack portfolio",
       description:
-        "Accelerate your full-stack SaaS app development with this comprehensive Next.js boilerplate, designed to streamline the process and save you time.",
-      borderColor: "via-violet-500",
-      color: "text-violet-500",
-      image: "/projects/starter.jpeg",
+        "A dynamic full-stack portfolio application, complete with a functional dashboard and the capability to edit website content, as you learn to design an appealing front end, implement a robust back end with user authentication, and integrate features for seamless portfolio customization.",
+      borderColor: "via-green-600",
+      color: "text-blue-500",
+      image: "/projects/portfolio.png",
     },
     {
       title: "Medical App",
@@ -83,6 +84,14 @@ export default function Course() {
       borderColor: "via-pink-500",
       color: "text-pink-500",
       image: "/projects/bankApp.jpeg",
+    },
+    {
+      title: "Next Js Saas Boilerplate",
+      description:
+        "Accelerate your full-stack SaaS app development with this comprehensive Next.js boilerplate, designed to streamline the process and save you time.",
+      borderColor: "via-violet-500",
+      color: "text-violet-500",
+      image: "/projects/starter.jpeg",
     },
   ];
   const features = [
@@ -108,7 +117,8 @@ export default function Course() {
       icon: Lock,
       title: "Authentication",
       items: [
-        " Magic links setup",
+        "Login with Credentials",
+        "Magic links setup",
         "Login with Google, GitHub, Discord",
         "User data stored in your DB",
         "Secured pages and routes",
@@ -140,7 +150,62 @@ export default function Course() {
       ],
     },
   ];
-
+  const coursePricing = {
+    title: "Join Zero to Full Stack Hero Today!",
+    subtitle:
+      "Everything you need to build full-stack applications with Next.js 14+ (App Router) and TypeScript",
+    plans: [
+      {
+        title: "Gold",
+        price: 200,
+        description:
+          "Best for small business owners, startups who needs landing page for their business.",
+        subscriptionLink: "#",
+        whatsIncluded: [
+          "Zero to Full Stack Hero Course Lifetime Access",
+          "Over 250 hours of content across 160+ videos",
+          "Community & Support: Join PAPAFAM's thriving community",
+          "Bonus: Access the exclusive Student Area with 10+ hour's of content",
+          "Access on iOS, Android or Web anytime, anywhere!",
+          "Weekly Course Updates",
+        ],
+        specialAccess: [],
+      },
+      {
+        title: "Platinum",
+        price: 350,
+        description: "",
+        subscriptionLink: "",
+        whatsIncluded: [
+          "2 Monthly Live Coaching Calls with Sonny",
+          "Weekly Success Coach Sessions",
+          "Learn how to crush any Coding Interview & land your dream job!",
+          "Guided Roadmap to Becoming a senior 6-figure developer",
+          "Entrepreneur's Toolkit: Learn about starting your own business/freelancing, soft skills & applying real world money-making strategies",
+        ],
+        specialAccess: [
+          "Source Code for 40+ Real World Projects",
+          "Resume/Portfolio Starter Pack",
+          "4 eBooks to master Next.js, JavaScript and Tailwind CSS!",
+          "Platinum Discord Invitation",
+        ],
+      },
+      {
+        title: "Diamond",
+        price: 450,
+        description: "",
+        subscriptionLink: "#",
+        whatsIncluded: [
+          "2 Additional Weekly Live Calls with Sonny (4 x month)",
+          "170+ hours of Additional Exclusive Mentorship content ",
+          "Access to Invite-only Diamond Community",
+        ],
+        specialAccess: [
+          "100 Coding Challenges & Solutions to Crack any Tech Interview",
+        ],
+      },
+    ],
+  };
   const FAQs = [
     {
       qn: "What do I need to know to take this course?",
@@ -148,11 +213,11 @@ export default function Course() {
     },
     {
       qn: "What does the course cover?",
-      ans: "The course covers Next.js basics, Next.js with TypeScript, building a full-stack Next.js application with Prisma, MongoDB, MySQL, Stripe Billing, Lemon Squeezy,Tailwind, and Mails with Resend. You'll also build three SaaS applications: a Next.js SaaS boilerplate, a medical app, and a banking app.",
+      ans: "The course covers Next.js basics, Next.js with TypeScript, building a full-stack Next.js application with Prisma, MongoDB, MySQL, Stripe Billing, Lemon Squeezy,Tailwind, and Mails with Resend. You'll also build three SaaS applications: a Next.js SaaS boilerplate, a medical app, and a banking app. Plus a Fullstack portfolio",
     },
     {
       qn: "This course is too expensive for me",
-      ans: "I understand that the price of this course may seem high at first glance. However, I want to assure you that I have carefully considered the value it offers and set the price accordingly.I have spoken with numerous developers from various backgrounds, including business owners in the USA, system administrators in Nigeria, and junior developers in India. Based on their feedback and the comprehensive content of the course, I believe it represents exceptional value for money. Consider the following:You are learning the most in-demand tech skills currently, which puts you ahead of the curve. This knowledge can open doors to career advancement, increased earning potential, and freelance opportunities.The course includes a comprehensive guide on how to find freelance clients, allowing you to start earning money immediately.The course provides valuable guidance on building and scaling your own applications, which can significantly increase your user base and potential revenue.When you consider the potential return on investment, the course price becomes much more justifiable. In fact, it could be the best investment you make in your career.If you are still hesitant, I encourage you to compare my course to other offerings on platforms like Udemy. You will quickly see that the depth of knowledge, hands-on projects, and personalized support I offer are unmatched at this price point.Ultimately, the decision is yours. I am confident that my course offers exceptional value and will equip you with the skills you need to achieve your career goals. However, I also respect your budget and understand that it may not be the right fit for everyone.",
+      ans: "I understand that the price of this course may seem high at first glance. However, I want to assure you that I have carefully considered the value it offers and set the price accordingly.I have spoken with numerous developers from various backgrounds and also benchmarked with other related courses in field, I believe it represents exceptional value for money. Consider the following:You are learning the most in-demand tech skills currently, which puts you ahead of the curve. This knowledge can open doors to career advancement, increased earning potential, and freelance opportunities.The course includes a comprehensive guide on how to create a saas app and how market it, allowing you to start earning money immediately.The course provides valuable guidance on building and scaling your own applications, which can significantly increase your user base and potential revenue.When you consider the potential return on investment, the course price becomes much more justifiable. In fact, it could be the best investment you make in your career.If you are still hesitant, I encourage you to compare my course to other offerings on platforms like Udemy. You will quickly see that the depth of knowledge, hands-on projects, and personalized support I offer are unmatched at this price point.Ultimately, the decision is yours. I am confident that my course offers exceptional value and will equip you with the skills you need to achieve your career goals. However, I also respect your budget and understand that it may not be the right fit for everyone.",
     },
     {
       qn: "It’s just another watch-along course. I won’t actually be able to code this myself. Just copy what you did.",
@@ -168,11 +233,11 @@ export default function Course() {
     },
     {
       qn: "What is the duration of the course?",
-      ans: "The course contains approximately 60+ hours of video content, covering all concepts at a detailed pace.",
+      ans: "The course contains approximately 100+ hours of video content, covering all concepts at a detailed pace.",
     },
     {
       qn: "What kind of projects will I build in the course?",
-      ans: "You will build three practical SaaS applications: a Next Js Fullstack Portfolio, Next.js SaaS boilerplate, a medical app, and a banking app. These projects are designed to give you hands-on experience with all the concepts covered in the course.",
+      ans: "You will build four practical SaaS applications: a Next Js Fullstack Portfolio, Next.js SaaS boilerplate, a medical app, and a banking app. These projects are designed to give you hands-on experience with all the concepts covered in the course.",
     },
     {
       qn: "What are the career opportunities after completing this course?",
@@ -200,42 +265,44 @@ export default function Course() {
     },
   ];
   return (
-    <div className="mx-auto mt-32 flex flex-1 flex-col items-center justify-center space-y-10">
-      <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm font-normal text-transparent shadow shadow-gray-700">
+    <div className="mx-auto mt-16 lg:mt-32 flex flex-1 flex-col items-center justify-center space-y-5 p-10">
+      <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm md:text-xl font-normal text-transparent shadow shadow-gray-700">
         The best Next.js course to build full-stack SaaS apps
       </h2>
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text font-bold  largeHeading py-8 mb-8 ">
+      <div className="max-w-5xl mx-auto ">
+        <h2 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text font-bold py-8  text-2xl md:text-3xl lg:text-5xl lg:text-center">
           The Only Next.js course you need for{" "}
           <span className="textGradient">building SaaS Apps from scratch</span>
         </h2>
-        <p className="text-xl mb-8">
+        <p className="text-sm lg:text-xl mb-8 lg:text-center">
           Learn how to build SaaS applications with Next.js 14 App Router,
           Supabase,MongoDB and Planet Scale and Stripe. From auth to production,
           we build together a SaaS app that you can use for your own projects.
           Get access to the course for only $200.
         </p>
-        <button className="inline-flex items-center justify-center font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:[&>*]:translate-y-0.5 bg-primary text-primary-foreground hover:bg-primary/90 text-sm h-10 [&>*]:py-2 [&>*]:px-4 rounded-full PreviewButton text-white">
-          <a
-            href=""
-            className="flex w-full h-full items-center transition-transform duration-500 ease-out undefined"
-          >
-            <span className="flex w-full flex-1 items-center justify-center">
-              <span>Enroll the Course</span>
-              <ChevronRight />
-            </span>
-          </a>
-        </button>
-        <div className="py-24">
+        <div className="flex items-center justify-center">
+          <button className="inline-flex items-center justify-center font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:[&>*]:translate-y-0.5 bg-primary text-primary-foreground hover:bg-primary/90 text-sm h-10 [&>*]:py-2 [&>*]:px-4 rounded-full PreviewButton text-white ">
+            <a
+              href=""
+              className="flex w-full h-full items-center transition-transform duration-500 ease-out undefined"
+            >
+              <span className="flex w-full flex-1 items-center justify-center">
+                <span>Enroll the Course</span>
+                <ChevronRight />
+              </span>
+            </a>
+          </button>
+        </div>
+        <div className="py-16 lg:py-24">
           <h2 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text font-bold text-3xl md:text-4xl lg:text-5xl textGradient">
-            We will Build 3+ Apps with Next Js 14
+            We will Build 4 Apps with Next Js 14
           </h2>
           <p className="py-4">
             It's NOT just another COURSE.This is the practical and interactive
             Next.js course you need to build SaaS apps deployed at the Edge ⚡️
           </p>
-          <div className="w-full grid grid-cols-3 gap-4  justify-center mx-auto my-10 sm:my-20 ">
-            {studentTypes.map((type, i) => {
+          <div className="w-full grid lg:grid-cols-3 gap-4  justify-center mx-auto my-10 sm:my-20 grid-cols-1 md:grid-cols-2  ">
+            {projects.map((project, i) => {
               return (
                 <div
                   key={i}
@@ -246,49 +313,49 @@ export default function Course() {
                       <div
                         className={twMerge(
                           "h-[2px] bg-gradient-to-r from-transparent  to-transparent  w-full",
-                          `${type.borderColor}`
+                          `${project.borderColor}`
                         )}
                       ></div>
                     </div>
                   </div>
                   <div className="flex flex-col gap-3 justify-center items-center text-center p-2 md:p-8">
                     <Image
-                      src={type.image}
+                      src={project.image}
                       width={259}
                       height={194}
-                      alt={type.title}
+                      alt={project.title}
                       className="rounded-full object-cover w-full h-48 cursor-pointer"
                     />
                     <p
-                      className={`font-bold mb-0 text-[.9rem]   sm:text-base leading-4 md:leading-5 ${type.color}`}
+                      className={`font-bold mb-0 text-[.9rem]   sm:text-base leading-4 md:leading-5 ${project.color}`}
                     >
-                      {type.title}
+                      {project.title}
                     </p>
                     <p className="mb-0 leading-3 md:leading-5 text-[0.6rem] lg:text-base line-clamp-2">
-                      {type.description}
+                      {project.description}
                     </p>
                   </div>
                 </div>
               );
             })}
           </div>
-          <div className="mt-8 sm:mt-16">
+          {/* <div className="mt-8 sm:mt-16">
             <FeaturedLanguages languages={languages} />
-          </div>
-          <div className="mx-auto flex items-center justify-center py-8 mt-8">
+          </div> */}
+          {/* <div className="mx-auto flex items-center justify-center py-8 mt-8">
             <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
-          </div>
-          {/* Course Outline */}
+          </div> */}
+
           <div className="mt-8">
             <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm font-normal text-transparent shadow shadow-gray-700">
               Course Roadmap
             </h2>
-            <h2 className="pt-6 text-white text-4xl font-bold">
+            <h2 className="pt-6 text-white text-2xl lg:text-4xl font-bold">
               Course Modules and Topics
             </h2>
             <CourseOutline />
           </div>
-          {/*  */}
+
           <div className="mt-8">
             <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm font-normal text-transparent shadow shadow-gray-700">
               With more than 100+ hours of HD Video Content, Learning at 2x
@@ -302,7 +369,7 @@ export default function Course() {
               available to you instantly. Build off our boilerplate and spend
               more time building your startup.
             </p>
-            <div className="grid grid-cols-3 gap-8 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
               {features.map((feature, i) => {
                 const Icon = feature.icon;
                 return (
@@ -310,8 +377,10 @@ export default function Course() {
                     key={i}
                     className="flex flex-col items-start justify-start gap-3"
                   >
-                    <Icon className="text-slate-400" />
-                    <h2>{feature.title}</h2>
+                    <div className="flex flex-row lg:flex-col gap-2">
+                      <Icon className="text-slate-400" />
+                      <h2>{feature.title}</h2>
+                    </div>
                     <ul>
                       {feature.items.map((item, i) => {
                         return (
@@ -327,6 +396,9 @@ export default function Course() {
               })}
             </div>
           </div>
+          {/* <div className="mt-8">
+            <PricingPlan coursePricing={coursePricing} />
+          </div> */}
           <div className="mt-8 max-w-3xl mx-auto">
             <h2 className="temporary-pulse inline-flex w-auto animate-pulse items-center space-x-2 rounded-full bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 bg-clip-text px-4 py-2 text-center text-sm font-normal text-transparent shadow shadow-gray-700 mb-8">
               Frequently Asked Questions (FAQs)

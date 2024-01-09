@@ -296,6 +296,9 @@ $color-Vright: #c976e0;
   @media (max-width: 500px) {
     font-size: 2rem;
   }
+  @media (max-width: 350px) {
+    font-size: 1rem;
+  }
 }
 .PreviewButton {
   transition: all 0.15s;

@@ -15,6 +15,7 @@ export default function CourseOutline() {
         "State Management: React Context, Zustand, Redux Toolkit",
         "Forms: Handling User Input, Validation, File Uploads",
         "API Routes: Creating RESTful APIs for Data Interactions",
+        "Server Actions and how to make them scalable",
         "Integrating with Prisma and MongoDB for Data Handling",
         "Authentication and Authorization Concepts",
         "Error Handling and Edge Cases",
@@ -80,7 +81,7 @@ export default function CourseOutline() {
   ];
   const features = ["Feature 1", "Feature 2", "Feature 3"];
   return (
-    <div className="p-16">
+    <div className="py-8 lg:p-16">
       <ol className="relative border-s border-gray-200 dark:border-gray-700 ">
         {modules.map((item, i) => {
           return (

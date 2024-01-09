@@ -14,7 +14,7 @@ export default function CustomAccordion({ faqs }) {
             <AccordionTrigger className="text-slate-400 text-xl ">
               {faq.qn}
             </AccordionTrigger>
-            <AccordionContent className="text-left leading-loose">
+            <AccordionContent className="text-left text-slate-100 leading-loose">
               {faq.ans}
             </AccordionContent>
           </AccordionItem>
