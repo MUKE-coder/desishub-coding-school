@@ -23,21 +23,22 @@ export default function CourseOutline() {
       ],
     },
     {
-      module: "Module 2: SaaS Business Essentials for Developers",
+      module:
+        "Module 2- Building Reusable Components and Components Market Place",
       title: "Transforming Technical Skills into Successful SaaS Products",
       topics: [
-        "What is saas and why is it popular",
-        "Leveraging Technical Skills for SaaS",
-        "How to find a saas idea and validate it",
-        "How to design a saas product and user interface",
-        "How to market and launch your saas product",
-        "How to monetize and scale your saas product",
-        "How to use analytics and feedback to improve your saas product",
-        "Monetization Strategies: Subscription models, Freemium models,Pricing strategies",
+        "Understanding the Importance of Reusable UI Components",
+        "Exploring UI Libraries: Shadcn, Flowbite, Preline, Acertanity UI, and More",
+        "Creating Custom UI Components with Next.js, Tailwind CSS, and Typescript",
+        "Implementing Component Variants and Props for Flexibility",
+        "Styling and Theming Reusable Components",
+        "Integrating Components into Fullstack Applications",
+        "Building a Fullstack Component Marketplace Website",
+        "Deploying and Hosting the Fullstack Application",
       ],
     },
     {
-      module: " Building a Medical App with Next.js",
+      module: "Module:3 - Building a Medical App with Next.js",
       title: "Next Js in Health Care",
       topics: [
         "Understanding Medical App Requirements",
